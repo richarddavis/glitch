@@ -9,7 +9,12 @@
         init: function () {
           // Solution for Handling Events.
           var sceneEl = document.querySelector('a-scene'); 
+          var boxEl = sceneEl.querySelector('a-box')
           
+          boxEl.addEventListener('foo', function () {
+            boxEl.setAttribute('color', 'blue');  
+          });
+          boxEl.emit('foo');
         }
       });
     </script>
