@@ -11,10 +11,18 @@
          */
         init: function () {
           // Add code here!
-          console.log('Welcome, class!');
-          
+          var sceneEl = document.querySelector("a-scene");
+          for (i=0; i<50; i++){
+            var tempBox = document.createElement("a-box");
+            tempBox.setAttribute("position", {"x":randRange(-3, 3), "y":randRange(1, 5), "z":randRange(-5, -9)});
+            tempBox.setAttribute("scale", {"x":randRange(0, 1), "y":randRange(0, 1), "z":randRange(0, 1)});
+            sceneEl.appendChild(tempBox);
+          }
         }
       });
+      function randRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
     </script>
   </head>
   <body>
