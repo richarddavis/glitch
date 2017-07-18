@@ -16,6 +16,7 @@
             var tempBox = document.createElement("a-box");
             tempBox.setAttribute("position", {"x":randRange(-3, 3), "y":randRange(1, 5), "z":randRange(-5, -9)});
             tempBox.setAttribute("scale", {"x":randRange(0.3, 1), "y":randRange(0.3, 1), "z":randRange(0.3, 1)});
+            tempBox.setAttribute("material", {color:randRange(0, 16777215)})
             sceneEl.appendChild(tempBox);
           }
         }
